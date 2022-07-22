@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Harten_Aas
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: fa6b370f89346af4b96d6e2a0be5f0e5, type: 3}
-  type: 2
+  type: 0
   troefRanking: 6
   speelRanking: 8
   troefWaarde: 11

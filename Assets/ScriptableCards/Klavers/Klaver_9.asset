@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Klaver_9
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: cb12af8b826f6254d9ddb655fa020ecd, type: 3}
-  type: 0
+  type: 1
   troefRanking: 7
   speelRanking: 3
   troefWaarde: 14

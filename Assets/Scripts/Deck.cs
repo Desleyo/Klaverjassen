@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    public GameObject emptyCard;
+    [SerializeField] DeckSorter deckSorter;
+    [SerializeField] GameObject emptyCard;
 
-    public List<GameObject> currentCards;
+    [HideInInspector] public List<GameObject> currentCards;
 
     public void CreateNewCard(Card randomCard)
     {
-        GameObject newEmptyCard = Instantiate(emptyCard, transform);
+        GameObject newEmptyCard = Instantiate(emptyCard);
         newEmptyCard.GetComponent<EmptyCard>().CopyCardInformation(randomCard);
 
         currentCards.Add(newEmptyCard);
+
+        if(currentCards.Count == 8)
+        {
+            SortCards();
+        }
+    }
+
+    void SortCards()
+    {
+        currentCards = deckSorter.GetSortedCards(currentCards);
+
+        foreach(GameObject card in currentCards)
+        {
+            card.transform.SetParent(transform);
+            card.transform.rotation = transform.rotation;
+        }
     }
 }

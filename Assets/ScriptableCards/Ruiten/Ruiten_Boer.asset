@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ruiten_Boer
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: f9f4694167e01da4683c1caeab89f3cf, type: 3}
-  type: 1
+  type: 2
   troefRanking: 8
   speelRanking: 4
   troefWaarde: 20

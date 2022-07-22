@@ -9,24 +9,28 @@ public class ShuffleManager : MonoBehaviour
 
     [SerializeField] Deck[] allDecks;
 
-    [SerializeField] int cardsPerPlayer = 8;
+    [SerializeField] int[] shuffleSequence;
 
     void Start()
     {
-        ResetCardsToBeShuffled();
-        ShuffleCards();
+        ResetCardsToShuffle();
     }
 
-    public void ResetCardsToBeShuffled()
+    public void ResetCardsToShuffle()
     {
         cardsToBeShuffled = allCards;
+
+        foreach(int sequence in shuffleSequence)
+        {
+            ShuffleCards(sequence);
+        }
     }
 
-    public void ShuffleCards()
+    public void ShuffleCards(int sequence)
     {
         foreach(Deck deck in allDecks)
         {
-            for (int i = 1; i <= 8; i++)
+            for (int i = 1; i <= sequence; i++)
             {
                 Card randomCard = cardsToBeShuffled[Random.Range(0, cardsToBeShuffled.Count)];
                 deck.CreateNewCard(randomCard);

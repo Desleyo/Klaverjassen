@@ -1,7 +1,7 @@
 public enum CardTypes
 {
+    Harten,
     Klavers,
     Ruiten,
-    Harten,
     Schoppen
 }

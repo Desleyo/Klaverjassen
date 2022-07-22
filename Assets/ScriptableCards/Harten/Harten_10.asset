@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Harten_10
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 4a148eb96971f1048a5d761cdd771163, type: 3}
-  type: 2
+  type: 0
   troefRanking: 5
   speelRanking: 7
   troefWaarde: 10

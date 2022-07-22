@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Klaver_Heer
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 0c85f62e446ebc64a8204d38b3b06dac, type: 3}
-  type: 0
+  type: 1
   troefRanking: 4
   speelRanking: 6
   troefWaarde: 4

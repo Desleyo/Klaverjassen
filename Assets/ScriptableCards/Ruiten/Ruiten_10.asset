@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ruiten_10
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: c390bbce3ddfdca4b865ce81dc454380, type: 3}
-  type: 1
+  type: 2
   troefRanking: 5
   speelRanking: 7
   troefWaarde: 10
