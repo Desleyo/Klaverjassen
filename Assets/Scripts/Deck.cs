@@ -18,13 +18,13 @@ public class Deck : MonoBehaviour
 
         if(currentCards.Count == 8)
         {
-            SortCards();
+            SortCards(CardTypes.None);
         }
     }
 
-    void SortCards()
+    void SortCards(CardTypes troefCard)
     {
-        currentCards = deckSorter.GetSortedCards(currentCards);
+        currentCards = deckSorter.GetSortedCards(currentCards, troefCard);
 
         foreach(GameObject card in currentCards)
         {

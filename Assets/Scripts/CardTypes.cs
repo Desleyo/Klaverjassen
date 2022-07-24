@@ -3,5 +3,6 @@ public enum CardTypes
     Harten,
     Klavers,
     Ruiten,
-    Schoppen
+    Schoppen,
+    None
 }
