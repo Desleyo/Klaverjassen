@@ -19,10 +19,7 @@ public class DeckSorter : MonoBehaviour
 
         List<GameObject> sortedCards = new();
 
-        sortedCards.AddRange(OrderListByWaarde(hartenCards, troefCard));
-        sortedCards.AddRange(OrderListByWaarde(klaversCards, troefCard));
-        sortedCards.AddRange(OrderListByWaarde(ruitenCards, troefCard));
-        sortedCards.AddRange(OrderListByWaarde(schoppenCards, troefCard));
+        sortedCards.AddRange(SeparateAndSortLists(troefCard));
 
         return sortedCards;
     }
@@ -53,6 +50,39 @@ public class DeckSorter : MonoBehaviour
                 schoppenCards.Add(card);
             }
         }
+    }
+
+    List<GameObject> SeparateAndSortLists(CardTypes troefCard)
+    {
+        List<GameObject> redList1 = new();
+        List<GameObject> blackList1 = new();
+        List<GameObject> redList2 = new();
+        List<GameObject> blackList2 = new();
+
+        redList1 = hartenCards;
+        blackList1 = klaversCards;
+        redList2 = ruitenCards;
+        blackList2 = schoppenCards;
+
+        if (klaversCards.Count == 0 && ruitenCards.Count != 0)
+        {
+            blackList1 = schoppenCards;
+            blackList2 = klaversCards;
+        }
+        else if (ruitenCards.Count == 0 && klaversCards.Count != 0)
+        {
+            redList1 = ruitenCards;
+            redList2 = hartenCards;
+        }
+
+        List<GameObject> combinedList = new();
+
+        combinedList.AddRange(OrderListByWaarde(redList1, troefCard));
+        combinedList.AddRange(OrderListByWaarde(blackList1, troefCard));
+        combinedList.AddRange(OrderListByWaarde(redList2, troefCard));
+        combinedList.AddRange(OrderListByWaarde(blackList2, troefCard));
+
+        return combinedList;
     }
 
     List<GameObject> OrderListByWaarde(List<GameObject> cards, CardTypes troefCard)
