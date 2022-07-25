@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShuffleManager : MonoBehaviour
 {
+    public static ShuffleManager instance;
+
     [SerializeField] List<Card> allCards;
     List<Card> cardsToBeShuffled;
 
@@ -11,22 +13,22 @@ public class ShuffleManager : MonoBehaviour
 
     [SerializeField] int[] shuffleSequence;
 
-    void Start()
+    private void Awake()
     {
-        ResetCardsToShuffle();
+        instance = this;
     }
 
-    public void ResetCardsToShuffle()
+    public void ShuffleCards()
     {
         cardsToBeShuffled = allCards;
 
         foreach(int sequence in shuffleSequence)
         {
-            ShuffleCards(sequence);
+            ShuffleCardsBySequence(sequence);
         }
     }
 
-    public void ShuffleCards(int sequence)
+    void ShuffleCardsBySequence(int sequence)
     {
         foreach(Deck deck in allDecks)
         {

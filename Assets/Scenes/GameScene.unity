@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 215594617}
   - component: {fileID: 215594619}
   m_Layer: 5
-  m_Name: Deck (1)
+  m_Name: Deck (BotLinks)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,12 +215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109946ce27dfccd4fa329b9a5d139fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortedCards: []
   hartenCards: []
   klaversCards: []
   ruitenCards: []
   schoppenCards: []
-  testScript: 0
 --- !u!1 &250283517
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +232,7 @@ GameObject:
   - component: {fileID: 250283519}
   - component: {fileID: 250283521}
   m_Layer: 5
-  m_Name: Deck (3)
+  m_Name: Deck (BotRechts)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,12 +311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109946ce27dfccd4fa329b9a5d139fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortedCards: []
   hartenCards: []
   klaversCards: []
   ruitenCards: []
   schoppenCards: []
-  testScript: 0
 --- !u!1 &308726941
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +582,7 @@ GameObject:
   - component: {fileID: 997054558}
   - component: {fileID: 997054560}
   m_Layer: 5
-  m_Name: Deck (2)
+  m_Name: Deck (BotBoven)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,12 +661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109946ce27dfccd4fa329b9a5d139fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortedCards: []
   hartenCards: []
   klaversCards: []
   ruitenCards: []
   schoppenCards: []
-  testScript: 0
 --- !u!1 &1052110224
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +851,7 @@ GameObject:
   - component: {fileID: 1462569174}
   - component: {fileID: 1462569175}
   m_Layer: 5
-  m_Name: Deck
+  m_Name: Deck (Speler)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,12 +930,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109946ce27dfccd4fa329b9a5d139fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortedCards: []
   hartenCards: []
   klaversCards: []
   ruitenCards: []
   schoppenCards: []
-  testScript: 1
 --- !u!1 &1559234410
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,8 +943,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559234411}
-  - component: {fileID: 1559234412}
   - component: {fileID: 1559234413}
+  - component: {fileID: 1559234412}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1035,12 +1027,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1559234410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109946ce27dfccd4fa329b9a5d139fc2, type: 3}
+  m_Script: {fileID: 11500000, guid: d71208e9fb315d3448c7634385c1d7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortedCards: []
-  hartenCards: []
-  klaversCards: []
-  ruitenCards: []
-  schoppenCards: []
-  testScript: 0
