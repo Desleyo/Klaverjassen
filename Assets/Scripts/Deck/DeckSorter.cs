@@ -33,19 +33,21 @@ public class DeckSorter : MonoBehaviour
 
         foreach (GameObject card in cards)
         {
-            if (card.GetComponent<EmptyCard>().type == CardTypes.Harten)
+            CardTypes type = card.GetComponent<EmptyCard>().type;
+
+            if (type == CardTypes.Harten)
             {
                 hartenCards.Add(card);
             }
-            else if (card.GetComponent<EmptyCard>().type == CardTypes.Klavers)
+            else if (type == CardTypes.Klavers)
             {
                 klaversCards.Add(card);
             }
-            else if (card.GetComponent<EmptyCard>().type == CardTypes.Ruiten)
+            else if (type == CardTypes.Ruiten)
             {
                 ruitenCards.Add(card);
             }
-            else if (card.GetComponent<EmptyCard>().type == CardTypes.Schoppen)
+            else if (type == CardTypes.Schoppen)
             {
                 schoppenCards.Add(card);
             }
@@ -54,15 +56,10 @@ public class DeckSorter : MonoBehaviour
 
     List<GameObject> SeparateAndSortLists(CardTypes troefCard)
     {
-        List<GameObject> redList1 = new();
-        List<GameObject> blackList1 = new();
-        List<GameObject> redList2 = new();
-        List<GameObject> blackList2 = new();
-
-        redList1 = hartenCards;
-        blackList1 = klaversCards;
-        redList2 = ruitenCards;
-        blackList2 = schoppenCards;
+        List<GameObject> redList1 = hartenCards;
+        List<GameObject> blackList1 = klaversCards;
+        List<GameObject> redList2 = ruitenCards;
+        List<GameObject> blackList2 = schoppenCards;
 
         if (klaversCards.Count == 0 && ruitenCards.Count != 0)
         {
@@ -91,7 +88,6 @@ public class DeckSorter : MonoBehaviour
             return new List<GameObject>();
 
         Dictionary<GameObject, int> cardValues = new();
-        List<GameObject> keys = new();
 
         foreach(GameObject card in cards)
         {
@@ -101,7 +97,9 @@ public class DeckSorter : MonoBehaviour
             cardValues.Add(card, cardRanking);
         }
 
-        foreach(KeyValuePair<GameObject, int> pair in cardValues.OrderBy(key => key.Value).Reverse())
+        List<GameObject> keys = new();
+
+        foreach (KeyValuePair<GameObject, int> pair in cardValues.OrderBy(key => key.Value).Reverse())
         {
             keys.Add(pair.Key);
         }
